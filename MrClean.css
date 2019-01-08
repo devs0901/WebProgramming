@@ -1,0 +1,159 @@
+*{
+	margin: 0;
+	padding: 15;
+}
+
+input{
+    font-size: 16px;
+    border: 0;
+    outline: none;
+}
+
+body{
+	background-image: linear-gradient(white,white,#80bfff);
+	margin-right: 20px;
+}
+
+h1{
+	color: red;
+	margin-top: 22px;
+	margin-left: 12px;
+	font-family: 'Nunito', sans-serif;
+}
+
+label{
+	font-family: 'Nunito', sans-serif;
+}
+
+h3{
+	margin-bottom: 0em;
+	font-family: 'Nunito', sans-serif;
+}
+
+p{
+	margin-top: 0em;
+	font-family: 'Nunito', sans-serif;
+}
+
+.topColumn{
+    float: left;
+    width: 29%;
+    padding: 10px;
+}
+
+.topRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column1{
+	padding: 15px;
+	float: left;
+	width: 50%;
+}
+
+.column2:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#alignedRight{
+	float: right;
+}
+
+#name{
+	height: 20px;
+}
+
+#checkerName{
+	font-family: 'Nunito', sans-serif;
+	color: red;
+}
+
+#checkerAddress{
+	font-family: 'Nunito', sans-serif;
+	color: red;
+}
+
+#checkerEmail{
+	font-family: 'Nunito', sans-serif;
+	color: red;
+}
+
+#checkerCellphone{
+	font-family: 'Nunito', sans-serif;
+	color: red;
+}
+
+#checkerCollection{
+	font-family: 'Nunito', sans-serif;
+	color: red;
+}
+
+#checkerDeliver{
+	font-family: 'Nunito', sans-serif;
+	color: red;
+}
+
+
+#address{
+	height: 20px;
+}
+
+.row1{
+	float: left;
+	width:50%;
+	padding: 15px;
+}
+
+.row1:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.row2:after{
+	content: "";
+	display: table;
+	clear: both;
+	padding: 15px;
+}
+
+.boxed{
+	border: 3px solid #0059b3;
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 390px;
+	margin-right: 390px;
+	background-color: #ffffff;
+}
+
+button{
+	background-color: #0059b3;
+	color: white;
+	padding: 15px 32px;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+	font-family: 'Nunito', sans-serif;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+table, th, td{
+	border: 1px solid black;
+	padding: 3px;
+	font-family: 'Nunito', sans-serif;
+}
+
+legend{
+    font-size: 30px;	
+	font-family: 'Nunito', sans-serif;
+}
+

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Mr Clean's Requirements</title>
+	<link rel="stylesheet" type="text/css" href="MrClean.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+</head>
+
+<body onload="myFunction()">
+
+	<div class = "topRow">
+		<div class = "topColumn">
+			<h1>Mr Clean
+			<br>Laundry Services</h1>
+		</div>
+		<div class = "topColumn">
+			<h1>LAUNDRY &
+			<br>DRY CLEANING SERVICES</h1>
+		</div>
+		<div class = "topColumn">
+			<p id="alignedRight">
+				<br>
+				Any Questions? Feel free to contact<br>
+				Jane Coralde<br>
+				Student Number: 100660214<br>
+			</p>
+		</div>
+	</div>
+
+	
+
+	<form name="laundryForm" onsubmit="checkCustomerData()">
+		<div id="customer" class="wrapper">
+			<p>
+				<div class = "column1">
+					<br><fieldset>
+						<label for="name">Name: </label>
+						<input type="text" id="name" onblur="validateName()"name="name" placeholder="Jane Coralde"> </input>
+						<div id = checkerName> </div>
+						</fieldset>
+					<br><fieldset>							
+						<label for="address">Address incl Postcode: </label> 
+						<br><ul><input type="text" id="addressStreet" onblur="validateAddress()" name="address" placeholder="## AA st."></ul>
+						<ul></input><input type="text" id="addressTown" onblur="validateAddress()" name="address" placeholder="Whitby"></input></ul>
+						<ul><input type="text" id="addressCity" onblur="validateAddress()" name="address" placeholder="Ontario"></input></ul>
+						<ul><input type="text" id="addressPostal" onblur="validateAddress()" name="address" placeholder="A#A#A#"></input></ul>
+						<div id = checkerAddress> </div>
+						</fieldset>
+					<br><fieldset>
+						<label for="email">Email: </label>
+						<input type="text" id="email" onblur="validateEmail()" name="email" placeholder="jane@chuchu.net"></input>
+						<div id = checkerEmail> </div>						
+						</fieldset>
+				</div>
+				<div class="column2">						
+					<br><fieldset>
+						<label for="cellphone">Cel No: </label>
+						<input type="text" id="cellphone" onblur="validateCellphone()" name="cellphone" placeholder="(###) ####-####"></input>
+						<div id = checkerCellphone> </div>
+						</fieldset>
+					<br><fieldset>
+						<label for="collection">Collection Date: </label>
+						<input type="date" id="collection" min="2018-01-01" onblur="validateCollection()"></input>
+						<div id = checkerCollection> </div>
+						</fieldset>
+					<br><fieldset>
+						<label for="delivery">Delivery Date: </label>
+						<input type="date" id="deliver" min="2018-01-02" onblur="validateDeliver()"></input>
+						<div id = checkerDeliver> </div>
+						</fieldset>
+					<br><fieldset>
+						<label for="notes">Delivery Notes: </label>
+						<br><br><input type="text" id="deliver">
+						</fieldset>
+					</div>
+				</p>
+			</div>
+	</form>
+
+	<div class="row1">
+		<div id = ShirtLaundry class="wrapper next-wrapper">
+			<h3>Shirt Laundry<p>(Wash or Dry Clean - Please circle either the W or DC column)</p> </h3>
+			
+			<table>
+				<tr>
+					<th width="14%"><h3>Qty</h3></th>
+					<th width="60%"><h3>Item</h3></th>
+					<th width="16.5%"><h3>W</h3></th>
+					<th width="17.1%"><h3>DC</h3></th>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr250" maxlength="5" size="5"><br></td>
+						<td>Shirts - WASH - Qty 1 to 4<br></td>
+						<td>
+							<input type="checkbox" id="wash" name="shirt" onclick="checker()">
+							2.50 ea
+						</td>
+						<td><br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr220" maxlength="5" size="5"><br></td>
+						<td>Shirts - WASH - Qty 5 to 9<br></td>
+						<td>
+							<input type="checkbox" id="wash" name="shirt" onclick="checker()">
+							2.20 ea<br></td>
+						<td><br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr200" maxlength="5" size="5"><br></td>
+						<td>Shirts - WASH - Qty 10+<br></td>
+						<td>
+							<input type="checkbox" id="wash" name="shirt" onclick="checker()">
+							2.00 ea<br></td>
+						<td><br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr460" maxlength="5" size="5"><br></td>
+						<td>Dinner Shirt<br></td>
+						<td>
+							<input type="checkbox" id="wash" name="shirt" onclick="checker()">
+							4.60<br></td>
+						<td><br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr250one" maxlength="5" size="5"><br></td>
+						<td>T Shirt<br></td>
+						<td>
+							<input type="checkbox" id="wash" name="shirt" onclick="checker()">
+							2.50<br></td>
+						<td><br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1465" maxlength="5" size="5"><br></td>
+						<td>Suit, 2 Piece<br></td>
+						<td><br></td>
+						<td>
+							<input type="checkbox" id="dryclean" name="shirt" onclick="checker()">
+							14.65<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1820" maxlength="5" size="5"><br></td>
+						<td>Suit, 3 Piece / Dinner<br></td>
+						<td><br></td>
+						<td>
+							<input type="checkbox" id="dryclean" name="shirt" onclick="checker()">
+							18.20<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1820one" maxlength="5" size="5"><br></td>
+						<td>Suit (Jacket & Dress)<br></td>
+						<td><br></td>
+						<td>
+							<input type="checkbox" id="dryclean" name="shirt" onclick="checker()">
+							18.20<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr615" maxlength="5" size="5"><br></td>
+						<td>Tie, Silk<br></td>
+						<td><br></td>
+						<td>
+							<input type="checkbox" id="dryclean" name="shirt" onclick="checker()">
+							6.15<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr470" maxlength="5" size="5"><br></td>
+						<td>Tie, Polyester<br></td>
+						<td><br></td>
+						<td>
+							<input type="checkbox" id="dryclean" name="shirt" onclick="checker()">
+							4.70<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr670" maxlength="5" size="5"><br></td>
+						<td>Waistcoat<br></td>
+						<td><br></td>
+						<td>
+							<input type="checkbox" id="dryclean" name="shirt" onclick="checker()">
+							6.70<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr810" maxlength="5" size="5"></td>
+						<td>Trousers</td>
+						<td><br></td>
+						<td>
+							<input type="checkbox" id="dryclean" name="shirt" onclick="checker()">
+							8.10</td>
+					</p>
+				</tr>	
+		</table>
+		</div>
+
+
+		<div id = Sheets class="wrapper next-wrapper">
+			<h3><br>Sheets, Covers & Blankets<p>(Wash only)</p> </h3>
+			
+			<table>
+				<tr>
+					<p>
+						<td width= "5%"><input type="text" id="pr600" maxlength="5" size="5"><br></td>
+						<td width="80%">Valance Sheet               from<br></td>
+						<td width="15%">6.00<br></td>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr125" maxlength="5" size="5"><br></td>
+						<td>Pillowcase<br></td>
+						<td>1.25<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr400" maxlength="5" size="5"><br></td>
+						<td>Sheets                      from<br></td>
+						<td>4.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr600one" maxlength="5" size="5"><br></td>
+						<td>Single Duvet Cover<br></td>
+						<td>6.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr700" maxlength="5" size="5"><br></td>
+						<td>Double Duvet Cover<br></td>
+						<td>7.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr800" maxlength="5" size="5"><br></td>
+						<td>King Duvet Cover<br></td>
+						<td>8.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr900" maxlength="5" size="5"><br></p></td>
+						<td>Superking Duvet Cover<br></td>
+						<td>9.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr500" maxlength="5" size="5"><br></td>
+						<td>Mattress Protector          from<br></td>
+						<td>5.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1300" maxlength="5" size="5"><br></td>
+						<td>Bedspreads                  from<br></td>
+						<td>13.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1000" maxlength="5" size="5"><br></td>
+						<td>Blankets Single<br></td>
+						<td>10.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1200" maxlength="5" size="5"><br></td>
+						<td>Blankets Double<br></td>
+						<td>12.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1400" maxlength="5" size="5"><br></td>
+						<td>Blankets King<br></td>
+						<td>14.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1600" maxlength="5" size="5"><br></td>
+						<td>Blankets Superking<br></td>
+						<td>16.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1000one" maxlength="5" size="5"><br></td>
+						<td>Candelwick Blanket<br></td>
+						<td>10.00<br></td>
+					</p>
+				</tr>
+			</table>
+		</div>
+
+		
+		<div id = ServiceWash class="wrapper next-wrapper">
+			<h3><br>Service Wash<p>(Wash, Dry & Fold)</p> </h3>
+			<table>
+				<td width= "5%"><input type="text" id="pr300" maxlength="5" size="5">
+				</td>
+				<td width="80%">Wash, Dry, & Fold (min. 4kg)</td>
+				<td width="15%">3.00/Kg</td>
+			</table>
+		</div>
+	</div>
+
+	<div class="row2">
+
+		<div id = Clothing class="wrapper next-wrapper">
+			<h3><br>Clothing - Dry Cleaning<p>(Please circle the correct description and price)</p> </h3>
+			<table>
+				<tr>
+					<p>
+						<td width="5%"><input type="text" id="pr635" maxlength="5" size="5"><br></td>
+						<td width="80%">Blouse / Shirt<br></td>
+						<td width="15%">6.35<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr560" maxlength="5" size="5"><br></td>
+						<td>Blouse / Vest Top<br></td>
+						<td>5.60<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1010" maxlength="5" size="5"><br></td>
+						<td>Dress, Regular Day<br></td>
+						<td>10.10<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1400one" maxlength="5" size="5"><br></td>
+						<td>Dress, Evening<br></td>
+						<td>14.00</td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr810one" maxlength="5" size="5"><br></td>
+						<td>Skirt, Regular<br></td>
+						<td>8.10<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1125" maxlength="5" size="5"><br></td>
+						<td>Skirt, Semi Pleated<br></td>
+						<td>11.25<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1570" maxlength="5" size="5"><br></td>
+						<td>Skirt, Fully Pleated<br></td>
+						<td>15.70<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr730" maxlength="5" size="5"><br></td>
+						<td>Knitwear, Light<br></td>
+						<td>7.30<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr880" maxlength="5" size="5"><br></td>
+						<td>Knitwear, Heavyweight<br></td>
+						<td>8.80<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1010one" maxlength="5" size="5"><br></td>
+						<td>Jacket / Blazer<br></td>
+						<td>10.10<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1200one" maxlength="5" size="5"><br></td>
+						<td>Jacket, 3/4 Length<br></td>
+						<td>12.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1500" maxlength="5" size="5"><br></td>
+						<td>Hunting Jacket<br></td>
+						<td>15.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1315" maxlength="5" size="5"><br></td>
+						<td>Overcoat, Mid<br></td>
+						<td>13.15<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1520" maxlength="5" size="5"><br></td>
+						<td>Overcoat, Full Length<br></td>
+						<td>15.20<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1360" maxlength="5" size="5"><br></td>
+						<td>Raincoat, Mid<br></td>
+						<td>13.60<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr1590" maxlength="5" size="5"><br></td>
+						<td>Raincoat, Full Length<br></td>
+						<td>15.20<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr2000" maxlength="5" size="5"></td>
+						<td>Ski Wear & Re-Proofing<br></td>
+						<td>20.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr700one" maxlength="5" size="5"></td>
+						<td>Pashminas<br></td>
+						<td>7.00<br></td>
+					</p>
+				</tr>
+			</table>
+		</div>
+
+		<div id = Others class="wrapper next-wrapper">
+			<h3><br>Other Items<p>(Wash Only)</p></h3>
+			<table>
+				<tr>
+					<p>
+						<td width="5%"><input type="text" id="pr130" maxlength="5" size="5"><br></td>
+						<td width="80%">Hand Towel<br></td>
+						<td width="15%">1.30<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr180" maxlength="5" size="5"><br></td>
+						<td>Bath Towel<br></td>
+						<td>1.80<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr220one" maxlength="5" size="5"><br></td>
+						<td>Bath Sheet<br></td>
+						<td>2.20<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr250one" maxlength="5" size="5"><br></td>
+						<td>Bath Mat<br></td>
+						<td>2.50<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr80" maxlength="5" size="5"><br></td>
+						<td>Flannel<br></td>
+						<td>0.80<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr90" maxlength="5" size="5"><br></td>
+						<td>Tea Towel<br></td>
+						<td>0.90<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr500one" maxlength="5" size="5"><br></td>
+						<td>Napkin<br></td>
+						<td>5.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr70" maxlength="5" size="5"><br></td>
+						<td>Tablecloths<br></td>
+						<td>0.70<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr350" maxlength="5" size="5"><br></td>
+						<td>Hanky<br></td>
+						<td>3.50<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr350one" maxlength="5" size="5"><br></td>
+						<td>Pyjamas<br></td>
+						<td>3.50<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr350two" maxlength="5" size="5"><br></td>
+						<td>Nightie<br></td>
+						<td>3.50<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr700two" maxlength="5" size="5"><br></td>
+						<td>Dressing Gown<br></td>
+						<td>7.00<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr60" maxlength="5" size="5"><br></td>
+						<td>Socks(Pair)<br></td>
+						<td>0.60<br></td>
+					</p>
+				</tr>
+				<tr>
+					<p>
+						<td><input type="text" id="pr100" maxlength="5" size="5"></td>
+						<td>Underwear<br></td>
+						<td>1.00<br></td>
+					</p>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<center>
+	<button onclick="printReceipt()">Submit Order</button>
+	<br></center>
+
+
+	<div id="receipt" class="boxed">
+			<legend><b><center>Receipt</center></b></legend>
+			<p>Prices Before Tax			:
+				<ul><p id="totalBeforeTax"></p></ul>
+			</p>
+			<p><br>Tax Amount				:
+				<ul><p id="tax"></p></ul>
+			</p>
+			<p>
+				<br>Prices After Tax (13%)	:
+				<ul><p id="totalAfterTax"></p></ul>
+			</p>
+
+			<center><p>have a good day!</p></center>
+		</p>
+	</div>
+
+	<script src="MrClean.js"></script>
+
+</body>
+
+</html>
